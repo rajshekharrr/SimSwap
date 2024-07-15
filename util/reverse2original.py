@@ -165,7 +165,7 @@ def reverse2wholeimage(b_align_crop_tenor_list,swaped_imgs, mats, crop_size, ori
 
     # target_image /= 255
     # target_image = 0
-    img = np.array(oriimg, dtype=np.float)
+    img = np.array(oriimg, dtype=float)  # Use the built-in Python float type
     for img_mask, target_image in zip(img_mask_list, target_image_list):
         img = img_mask * target_image + (1-img_mask) * img
         
